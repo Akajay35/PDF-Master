@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: pdf-master-api
+    runtime: docker
+    rootDir: backend
+    plan: free
+    healthCheckPath: /health
+    envVars:
+      - key: MAX_UPLOAD_MB
+        value: "20"
+      - key: CORS_ORIGINS
+        value: "*"
